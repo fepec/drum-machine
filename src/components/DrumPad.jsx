@@ -3,10 +3,9 @@
 
 export default function DrumPad(props) {
     return (
-      <div className="col-4" id={props.drumName}>
-        <audio id={props.drumKey} src={props.drumFile}></audio>
-        <p>{props.drumKey}</p>
-        <p>{props.drumName}</p>
-      </div>
+      <button className="col-4" id={props.drumName} onClick={props.padClick}>
+        <audio id={props.drumKey} src={props.drumSource}></audio>
+        {props.drumKey}
+      </button>
     );
   }
